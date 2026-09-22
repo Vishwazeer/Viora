@@ -1,0 +1,33 @@
+{
+  "name": "viora-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/ --max-warnings 0"
+  },
+  "dependencies": {
+    "@livekit/components-core": "^0.12.13",
+    "@livekit/components-react": "^2.9.21",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "livekit-client": "^2.18.10",
+    "lucide-react": "^0.447.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "recharts": "^2.12.7"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "vite": "^5.4.8"
+  },
+  "description": "Viora — Intelligent Voice Receptionist for Healthcare — handles appointment scheduling, patient intake, symptom triage, and front-desk operations."
+}

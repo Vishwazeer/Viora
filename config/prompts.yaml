@@ -1,0 +1,75 @@
+﻿# Viora – Configurable Agent Behaviour
+# Adjust clinic-specific details here without touching code.
+
+clinic:
+  name: "Apollo Health Clinic"           # Display name used in greetings
+  short_name: "the clinic"               # Used in casual references
+  phone_human: "+91-XXXX-XXXXXX"        # Fallback number announced on escalation
+  address: "Update with actual address"
+  city: "Pune"
+  emergency_number: "108"               # Indian emergency services
+
+opd_hours:
+  Monday:    "9:00 AM â€“ 6:00 PM"
+  Tuesday:   "9:00 AM â€“ 6:00 PM"
+  Wednesday: "9:00 AM â€“ 6:00 PM"
+  Thursday:  "9:00 AM â€“ 6:00 PM"
+  Friday:    "9:00 AM â€“ 6:00 PM"
+  Saturday:  "9:00 AM â€“ 2:00 PM"
+  Sunday:    "Closed (Emergency only)"
+
+departments:
+  - name: "Gastroenterology & Proctology"
+    head: "Dr. Ashwin Porwal"
+    days: "Monâ€“Sat"
+    timings: "10:00 AM â€“ 1:00 PM"
+  - name: "General Surgery"
+    head: "Dr. Priya Mehta"
+    days: "Monâ€“Fri"
+    timings: "9:00 AM â€“ 12:00 PM"
+  - name: "Internal Medicine"
+    head: "Dr. Rajesh Nair"
+    days: "Monâ€“Sat"
+    timings: "3:00 PM â€“ 6:00 PM"
+  - name: "Dietetics & Nutrition"
+    head: "Ms. Sunita Patil"
+    days: "Tue, Thu, Sat"
+    timings: "11:00 AM â€“ 1:00 PM"
+
+insurance_panels:
+  - "Star Health Insurance"
+  - "HDFC ERGO"
+  - "Niva Bupa"
+  - "United India Insurance"
+  - "New India Assurance"
+  - "CGHS"
+  - "ECHS"
+
+# FAQ entries â€“ intent matched via semantic similarity in agent/tools/faq.py
+faq:
+  - question: "Do you have parking?"
+    answer: "Yes, we have free parking available for patients."
+  - question: "Is the clinic wheelchair accessible?"
+    answer: "Yes, we are fully wheelchair accessible with ramps and a dedicated lift."
+  - question: "Can I get a prescription without visiting?"
+    answer: "Prescription refills for existing patients can be reviewed by our doctor. I can log the request and our team will call you back."
+  - question: "Do you do home visits?"
+    answer: "We currently do not offer home visits. However, we do offer telemedicine appointments."
+  - question: "How early should I arrive before my appointment?"
+    answer: "Please arrive 10â€“15 minutes before your scheduled time to complete registration."
+  - question: "Can I walk in without an appointment?"
+    answer: "Walk-ins are welcome during OPD hours, but appointment holders are given priority. To avoid waiting, I can book you a slot right now."
+
+# Triage scoring weights (ICMR-aligned)
+triage:
+  emergency_score_threshold: 80
+  urgent_score_threshold: 50
+  red_flag_symptoms:
+    - "chest pain"
+    - "difficulty breathing"
+    - "loss of consciousness"
+    - "severe bleeding"
+    - "sudden severe headache"
+    - "facial drooping"
+    - "arm weakness"
+    - "speech difficulty"

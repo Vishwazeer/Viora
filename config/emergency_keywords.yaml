@@ -1,0 +1,147 @@
+# Viora — Emergency Keyword Lexicon
+# Triggers immediate human escalation + 108 advisory.
+# Words are matched case-insensitively and as substrings.
+
+english:
+  cardiac:
+    - "chest pain"
+    - "chest tightness"
+    - "heart attack"
+    - "heart pain"
+    - "palpitations"
+    - "my heart is racing"
+    - "cardiac arrest"
+  respiratory:
+    - "can't breathe"
+    - "cannot breathe"
+    - "trouble breathing"
+    - "breathing problem"
+    - "shortness of breath"
+    - "choking"
+    - "suffocating"
+  neurological:
+    - "unconscious"
+    - "passed out"
+    - "fainted"
+    - "stroke"
+    - "seizure"
+    - "convulsion"
+    - "fits"
+    - "can't move"
+    - "face drooping"
+  haemorrhage:
+    - "heavy bleeding"
+    - "bleeding heavily"
+    - "bleeding won't stop"
+    - "blood everywhere"
+    - "coughing blood"
+    - "throwing up blood"
+  mental_health:
+    - "want to die"
+    - "end my life"
+    - "kill myself"
+    - "suicide"
+    - "self harm"
+    - "hurt myself"
+  general:
+    - "emergency"
+    - "ambulance"
+    - "call 108"
+    - "it's serious"
+    - "very serious"
+    - "life threatening"
+    - "dying"
+
+hindi:
+  cardiac:
+    - "seene mein dard"
+    - "seene mein jalan"
+    - "dil ka daura"
+    - "dil mein dard"
+    - "dhadkan tej"
+    - "heart attack"
+  respiratory:
+    - "saans nahi aa rahi"
+    - "saans lene mein takleef"
+    - "dam ghut raha"
+    - "saans band ho rahi"
+    - "naak band"
+    - "ghutan"
+  neurological:
+    - "behosh ho gaya"
+    - "behosh ho gayi"
+    - "gir gaye"
+    - "pattan"
+    - "mirgi"
+    - "chakkar aa rahe"
+    - "haath band ho gaya"
+    - "chal nahi pa raha"
+  haemorrhage:
+    - "zyada khoon"
+    - "bahut khoon"
+    - "khoon band nahi"
+    - "khoon nikal raha"
+    - "ulti mein khoon"
+    - "khookhi mein khoon"
+  mental_health:
+    - "marna chahta hun"
+    - "marna chahti hun"
+    - "jaan dena chahta"
+    - "khatam karna chahta"
+    - "khatam kar lunga"
+    - "khud ko hurt karna"
+    - "aatmahatya"
+  general:
+    - "ambulance bulao"
+    - "108 lagao"
+    - "emergency hai"
+    - "bahut serious hai"
+    - "jaan ka khatra"
+
+marathi:
+  cardiac:
+    - "chhati mein vedna"
+    - "chhati dukhte"
+    - "hadayavikar"
+    - "dhapdhap vadali"
+    - "dil la tras"
+    - "chhati ghabar"
+  respiratory:
+    - "shwas gheta yet nahi"
+    - "shwas koshta"
+    - "dama"
+    - "shwas band"
+    - "guda gheto"
+  neurological:
+    - "shahudat nahi"
+    - "koshte padlet nahi"
+    - "fita ala"
+    - "chakkar yete"
+    - "padvana"
+    - "stroke"
+    - "haath chalat nahi"
+  haemorrhage:
+    - "jast rakt"
+    - "khup rakt"
+    - "rakt thambat nahi"
+    - "rakt padte"
+    - "okarit rakt"
+  mental_health:
+    - "mala marayche ahe"
+    - "jiv dyayla pahaje"
+    - "sampta karayla pahaje"
+    - "swatala dukh"
+    - "atmahatya"
+  general:
+    - "ambulance patha"
+    - "108 ghya"
+    - "emergency ahe"
+    - "khup serious ahe"
+    - "jivachi bhiti"
+
+# Confidence threshold: how many keywords must match to trigger escalation
+# (prevents false positives from partial word matches)
+escalation_threshold: 1
+
+# Time (ms) before hard-transferring to human after emergency detected
+transfer_delay_ms: 3000
